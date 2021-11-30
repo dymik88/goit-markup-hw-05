@@ -103,8 +103,7 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--main-title-color);
-  transition: color 250ms linear;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   position: relative;
 }
@@ -123,7 +122,7 @@ body {
   background-color: var(--accent-color);
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -1px;
   border-radius: 2px;
 }
 .contact {
@@ -142,8 +141,7 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--second-text-color);
-  transition: color 300ms linear;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-item {
   display: flex;
@@ -154,6 +152,7 @@ body {
 .contact-link-logo {
   margin-right: 10px;
   fill: #757575;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-link:hover,
 .contact-link:focus {
@@ -203,8 +202,9 @@ body {
   color: var(--first-button-color);
   background: var(--accent-color);
 
-  transition: color 250ms linear, background-color 250ms linear, box-shadow 250ms linear;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:focus,
@@ -279,15 +279,18 @@ body {
   position: relative;
 }
 .work-item-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  padding: 27px 82px;
+
   width: 100%;
-  height: 25%;
+  height: 22%;
 
   color: var(--first-button-color);
   background: rgba(47, 48, 58, 0.8);
@@ -364,8 +367,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 250ms linear;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-item-link:hover,
 .team-item-link:focus {
@@ -374,14 +376,13 @@ body {
 .team-item-link:hover .team-list-icon,
 .team-item-link:focus .team-list-icon {
   fill: var(--first-button-color);
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-list-icon {
   fill: #afb1b8;
-  height: 22px;
-  width: 22px;
-  transition: fill 250ms linear;
+  height: 20px;
+  width: 20px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* -----------------------------Clients-------------------------------------- */
 .client-list {
@@ -399,13 +400,11 @@ body {
   justify-content: center;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  transition: fill 250ms linear, border-color 250ms linear;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms linear, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-icon {
   fill: #afb1b8;
-  transition: fill 250ms linear;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-link:hover,
 .client-link:focus {
@@ -442,8 +441,7 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--first-button-color);
-  transition: color 250ms linear;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-item-street:hover,
 .address-item-street:focus {
@@ -455,8 +453,7 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--second-text-color);
-  transition: color 250ms linear;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .adress-item-contact:hover,
 .adress-item-contact:focus {
@@ -505,8 +502,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #44454e;
-  transition: background-color 250ms linear;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-item-link:hover,
 .footer-item-link:focus {
@@ -519,10 +515,9 @@ body {
 
 .footer-list-icon {
   fill: #fff;
-  height: 22px;
-  width: 22px;
-  transition: fill 250ms linear;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  height: 20px;
+  width: 20px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ------------------------------------portfolio main section------------------------------ */
@@ -549,8 +544,9 @@ body {
   color: var(--main-title-color);
   border-radius: 4px;
   border-style: hidden;
-  transition: color 250ms linear, background-color 250ms linear, box-shadow 250ms linear;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter-button:hover,
 .filter-button:focus {
@@ -572,9 +568,7 @@ body {
   margin-right: 30px;
   margin-bottom: 30px;
 }
-.projects-item:hover .projects-item-top-text {
-  transform: translateY(0%);
-}
+
 .projects-item-container {
   position: relative;
   overflow: hidden;
@@ -585,26 +579,7 @@ body {
 .projects-item:nth-last-child(-n + 3) {
   margin-bottom: 0px;
 }
-.projects-item-top-text {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 1.56;
-  letter-spacing: 0.03em;
-  color: var(--first-button-color);
-  background-color: rgba(33, 150, 243, 0.9);
 
-  width: 100%;
-  height: 100%;
-
-  padding: 63px 24px;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translateY(100%);
-  transition: transform 250ms linear;
-  overflow: auto;
-}
 .projects-item-name {
   font-weight: 700;
   font-size: 18px;
@@ -625,13 +600,34 @@ body {
 }
 .projects-image-container {
   display: block;
-  transition: box-shadow 250ms linear;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projects-image-container:hover,
 .projects-image-container:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.projects-item-top-text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--first-button-color);
+  background-color: rgba(33, 150, 243, 0.9);
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: auto;
+}
+
+.projects-image-container:hover .projects-item-top-text,
+.projects-image-container:focus .projects-item-top-text {
+  transform: translateY(0%);
 }
 /* ----------backdrop----------modal-window---- */
 .backdrop {
